@@ -1,0 +1,97 @@
+<html>
+<head>
+    //conjunto de informações/scripts/etc que serão ustilizados pelo browser
+    //HTML 4
+    <meta http-equiv= "Content - Type" content= "texte/html; charset= utf - 8">
+    //HTML 5
+    <meta charset= "utf -8">
+    <title> Olá mundo </title>
+
+    <style>
+        body{
+            background-color: aqua;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        p {
+            background-color: cadetblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 50px;
+            margin-left: 70px;
+            margin-bottom: 50px;
+        }
+
+        div{
+            background-color: chartreuse;
+            padding: 50px;
+            padding-left: 100px;
+        }
+    </style>
+
+    <script>
+    function ClicouBotao (buttonClicado){
+        //alert("Botão clicado!!!"); 
+        
+        //elementoParagrafo = document.createElement("p");   
+        //elementoParagrafo.ennerHTML = "Texto do paragrafo";
+        
+        paragrafo1 = document.getElementById("paragrafo");
+        paragrafo1.innerHTML = "Valor modificado";
+    
+        elementosLaranjas = document.getElementsByClassName("paragrafoslaranjas");
+        for (i = 0; i < elementoslaranjas.lenght; i++){
+            elementosLaranjas[i].style = "background: black";
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Introdução</h1>
+        <p> Era uma vez</p>
+        <h1>Capitulo 2</h1>
+        <p id= "paragrafo1" class = "paragrafosLaranjas"> Outro parágrafo</p>
+        <p id= "paragrafo2" class = "paragrafosLaranjas"> Outro parágrafo</p>
+        <p id= "paragrafo3" class = "paragrafosAzuis"> Outro parágrafo</p>
+        <p id= "paragrafo4" class = "paragrafosLaranjas"> Outro parágrafo</p>
+        <p id= "paragrafo5" class = "paragrafosAzuis"> Outro parágrafo</p>
+        <p id= "paragrafo6" class = "paragrafosLaranjas"> Outro parágrafo</p>
+        <h1>Conclusão</h1>
+        <p>fim...</p>
+    </div>
+
+    <div>
+        <h1>H1</h1>
+        <h2>H2</h2>
+        <h3>H3</h3>
+        <h4>H4</h4>
+        <h5>H5</h5>
+        <h6>H6</h6>
+    </div>
+
+
+    <div>
+        <form action= "umaURLQualquer">
+            <label> CPF </label>
+            <input name= "cpf" type ="text" value= "valor padrão"\>
+            <br\>
+            <label> Senha</label>
+            <input neme= "senha" type="password">
+            <br\>
+            <label> Data e hora</label>
+            <input name= "hora" type="time" value= "06:10">
+
+            <input type= "button" value="o valor"\>
+            <br\>
+            <input type= "submit" value= "submit"\>
+            <br\>
+            <input type= "reset" value= "Limpar os campos"\>
+            </form>
+
+        <button>onclick="ClicouBotao(this)" Clique aqui</button> 
+    </div>
+
+</body>
+
+</html>
