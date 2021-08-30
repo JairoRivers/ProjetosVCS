@@ -24,11 +24,13 @@
         function incrmentarForm (){
             var nomeDocampo = document.getElementById("nomeDoCampo").value;
             var nomeDocampo = document.getElementById("tipoDeCampo").value;
-            var formulario = document.getElementById("formularioGerado");
             
-            var novoInput = document.createElement
-            novoInput.name
-            novoInput.
+            var novoLabel = document.createElement("label");
+            novolabel.innerHTML = momeDoCampo;
+            
+            var novoInput = document.createElement("input");
+            novoInput.name = nomeDoCampo;
+            novoInput.type = tipoDoCampo;
             novoInput.className = "inputGerado";
 
             var formulario = document.getElementById("formularioGerado");
