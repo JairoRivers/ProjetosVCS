@@ -17,16 +17,12 @@
      </style>
             
     <script>
-        function ClicouBotao (buttonClicado){
-         
-
-        }
-        function incrmentarForm (){
-            var nomeDocampo = document.getElementById("nomeDoCampo").value;
-            var nomeDocampo = document.getElementById("tipoDeCampo").value;
+        function incrementarForm (){
+            var nomeDoCampo = document.getElementById("nomeDoCampo").value;
+            var tipoDoCampo = document.getElementById("tipoDoCampo").value;
             
             var novoLabel = document.createElement("label");
-            novolabel.innerHTML = momeDoCampo;
+            novoLabel.innerHTML = nomeDoCampo;
             
             var novoInput = document.createElement("input");
             novoInput.name = nomeDoCampo;
@@ -42,7 +38,7 @@
         function logarJSON (){
             var objeto = {};
 
-            var inputGerados = document.getElementsByClassName("inputGerado");
+            var inputsGerados = document.getElementsByClassName("inputGerado");
             for(var i=0; i<inputsGerados.lenght; i++){
                 var inputGerado = inputsGerados[i];
                 
@@ -66,10 +62,9 @@
             <input id= "nomeDoCampo" type="text" name="nome"\><br\>
 
             <label> Tipo </label>
-            <input id= "tipoDoCampo" type= "Tipo" name="tipo"\>
+            <input id= "tipoDoCampo" type= "Tipo" name="tipo"\><br\>
 
-            <input type= "button" value= "Incrementar formulário" onclick= "incrementarFormulario()">
-            <input type= "reset" value= "Limpar os campos"\>
+            <input type= "button" value= "Incrementar formulário" onclick= "incrementarForm()"\>
             
         </form>
         <p> Formulário gerado </p>
