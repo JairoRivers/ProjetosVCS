@@ -1,0 +1,81 @@
+<html> 
+    <meta http-equiv= "Content - Type" content= "texte/html; charset= utf - 8">
+    <meta charset= "utf -8">
+    <title> Formulario </title>
+
+
+<head>
+    <style>
+        body{
+            background-color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        div{
+            background-color: aqua;
+            padding: 50px;
+        }
+     </style>
+            
+    <script>
+        function ClicouBotao (buttonClicado){
+         
+
+        }
+        function incrmentarForm (){
+            var nomeDocampo = document.getElementById("nomeDoCampo").value;
+            var nomeDocampo = document.getElementById("tipoDeCampo").value;
+            var formulario = document.getElementById("formularioGerado");
+            
+            var novoInput = document.createElement
+            novoInput.name
+            novoInput.
+            novoInput.className = "inputGerado";
+
+            var formulario = document.getElementById("formularioGerado");
+            formulario.appendChild(novoLabel);
+            formulario.appendChild(novoInput);
+            formulario.appendChild(document.createElement("br"));
+        }
+
+        function logarJSON (){
+            var objeto = {};
+
+            var inputGerados = document.getElementsByClassName("inputGerado");
+            for(var i=0; i<inputsGerados.lenght; i++){
+                var inputGerado = inputsGerados[i];
+                
+                var nomeDoCampo = inputGerado.name;
+                var valorDoCAmpo = inputGerado.value;
+           
+                objeto[nomeDoCampo] =valorDoCampo;
+            }
+
+            console.log(objeto);
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <p> Formulário gerador de formulário </p>
+        <form>
+            
+            <label> Nome: </label>
+            <input id= "nomeDoCampo" type="text" name="nome"\><br\>
+
+            <label> Tipo </label>
+            <input id= "tipoDoCampo" type= "Tipo" name="tipo"\>
+
+            <input type= "button" value= "Incrementar formulário" onclick= "incrementarFormulario()">
+            <input type= "reset" value= "Limpar os campos"\>
+            
+        </form>
+        <p> Formulário gerado </p>
+        <form id="formularioGerado">
+
+            <input type= "submit" value= "Logar JSON" onclick="logarJSON()"\> <br/>
+        </form>
+    </div>
+</body>
+
+</html>
