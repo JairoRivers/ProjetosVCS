@@ -2,13 +2,59 @@
 <head>
     <meta http-equiv= "Content - Type" content= "texte/html; charset= utf - 8">
     <meta charset= "utf -8">
-    <tile> Site teste </tile>
+    <tile> Estudos para VP1 </tile>
 </head>
     
 <body>
+    <style> 
+        body{
+            background-color:cadetblue;
+        }
+        div{
+            background-color: darkgray;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #divInfo{
+            background-color:gold;
+        }
+    </style>
+
+    <script>
+        function enviarFormulario(){
+            alert ("Enviando");
+        }
+    </script>
 
 
 
+
+
+    <div>
+        <p> Formulário de acesso </p>
+
+        <form>
+            <label> Nome: </label><br\>
+            <input type= "text" name="nome">
+
+            <label> CPF </label><br\>
+            <input type= "number" name="cpf">
+
+            <input type="button" value ="Enviar" onclick = "enviarFormulario()">
+        </form>
+
+        <p>Formulario de teste</p>
+
+        <form>
+            <label></label>
+            
+        </form>
+        
+    </div>
+
+    <div id="divinfo">
+        <p>Informações gerais: 1 - Nome válido apenas completo 2 - CPF válido apenas com números</p>
+        
+    </div>
     
 </body>
 
