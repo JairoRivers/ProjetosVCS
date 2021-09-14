@@ -42,7 +42,7 @@
             transition: .6s;
         }
 
-        .slides{
+        .carousel{
             display: flex;
             width: 500%;
             height: 100%;
@@ -85,7 +85,8 @@
         #dif{
             background-color:rgb(88, 89, 90);
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 10px;            border: solid;
+            margin: 10px;            
+            border: solid;
             transform: translate(39%);
             margin-right: 755px;
         }
@@ -100,6 +101,7 @@
             display: inline-block;
             font-size: medium;
             border: double;
+            cursor: pointer;
         }
 
         #counter-label, #cp, #counter-label2, #counter-label3 {
@@ -115,30 +117,20 @@
         var counterVal3 = 999;
 
         function incrementClick() {
-            updateDisplay(++counterVal);
-            document.getElementById("curtir").disabled = true;
+            var val = counterVal++;
+            document.getElementById("counter-label").innerHTML = val;            
         }   
         
-        function updateDisplay(val) {
-            document.getElementById("counter-label").innerHTML = val;
-        }   
-
         function incrementClick2(){
-            updateDisplay2(++counterVal2);
-            document.getElementById("curtir").disabled = true;
-        }
-        function updateDisplay2(val2) {
+            var val2 = counterVal2++;
             document.getElementById("counter-label2").innerHTML = val2;
         }
-
+    
         function incrementClick3(){
-            updateDisplay3(++counterVal3);
-            document.getElementById("curtir").disabled = true;
-        }
-        function updateDisplay3(val3) {
+            var val3 = counterVal3++;
             document.getElementById("counter-label3").innerHTML = val3;
         }
-
+        
         function addComentario(){
             var ing = document.getElementById("coment").value;
             var comentarios = document.getElementById("comentarios").innerHTML;
@@ -171,7 +163,7 @@
     <div>
         <p id="user">FoxP</p>   
         <div class="content">
-            <div class="slides">
+            <div class="carousel">
                 <input type="radio" name="radio" id="slide1" checked>
                 <input type="radio" name="radio" id="slide2">
                 <input type="radio" name="radio" id="slide3">
@@ -218,7 +210,7 @@
     <div>
         <p id="user">Arte Kou</p>   
         <div class="content">
-            <div class="slides">
+            <div class="carousel">
                 <input type="radio" name="radio" id="slide4" checked>
                 <input type="radio" name="radio" id="slide5">
                 <input type="radio" name="radio" id="slide6">
@@ -264,7 +256,7 @@
     <div>
         <p id="user">Scenery</p>   
         <div class="content">
-            <div class="slides">
+            <div class="carousel">
                 <input type="radio" name="radio" id="slide7" checked>
                 <input type="radio" name="radio" id="slide8">
                 <input type="radio" name="radio" id="slide9">
