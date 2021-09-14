@@ -1,0 +1,116 @@
+<html>
+<head>
+    <meta http-equiv= "Content - Type" content= "texte/html; charset= utf - 8">
+    <meta charset= "utf -8">
+    <title> Instafeed </title>
+
+    <style>
+       #logo{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: chocolate;
+        }
+        body{
+            background-color: black;
+            margin:0;
+            padding:0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #user{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            background-color:cornflowerblue;
+            font-size: 20px;
+        }
+        label{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+        div{
+            background-color:dimgray;
+            margin-top: 30px;
+            margin-left: 400px;
+            margin-right: 487px;
+            margin-bottom: 30px;
+        }
+        
+
+        p{
+            font-size: 20px;
+        }
+
+        #curtir{
+            background-color: cornflowerblue;
+            float: float;
+        }
+        #counter-label{
+            display: inline-block;
+        }
+       
+    </style>
+
+    <script>
+        var counterVal = 30;
+        var counterVal2 = 50;
+
+        function incrementClick() {
+            updateDisplay(++counterVal);
+            
+        }   
+        
+        function updateDisplay(val) {
+            document.getElementById("counter-label").innerHTML = val;
+        }   
+
+        function incrementClick2(){
+            updateDisplay2(++counterVal2);
+        }
+        function updateDisplay2(val2) {
+            document.getElementById("counter-label2").innerHTML = val2;
+        }  
+    </script>
+ 
+</head>
+
+<body>
+    <p id="logo"><font size ="5"> Instagram</font> </p>
+
+    <div>
+        <p id="user">ContaInstagram</p>   
+        
+        <img src="https://www.partnerscom.com.br/wp-content/uploads/2018/09/233601-veja-o-que-sao-campanhas-crossmedia-e-quais-resultados-esperar.png" width=820 height=500>
+        
+        <p>Curtido por </p>
+        <p id="counter-label">30</p>
+        <input id="cutir" type="button"  value="Curtir" onclick="incrementClick();">
+        
+        <p>Usuário3 - Imagem incrivel</p>
+        <p>Usuário5 - @usuario2 olha isso!!!</p>
+
+        <label>Comentário:</label>
+        <input type="text" ><br\>
+        <input type="button" value="Enviar" onclick="addComentario();">
+        
+    </div>
+    
+    <div>
+        <p id="user">ContaInstagramSecundária</p>   
+        
+        <img src="https://pbs.twimg.com/media/Ef9eUEzUMAclDXA.jpg:large" width=820 height=500>
+        
+        <p>Curtido por </p>
+        <p id="counter-label2">50</p>
+        <input id="cutir" type="button"  value="Curtir" onclick="incrementClick2();">
+        
+        <p>Usuário3 - WOW</p>
+        <p>Usuário5 - Faz mais!!!</p>
+
+        <label>Comentário:</label>
+        <input type="text" ><br\>
+        <input type="button" value="Enviar" onclick="addComentario();">
+        
+    </div>
+    
+</body>
+</html>
