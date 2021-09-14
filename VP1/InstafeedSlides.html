@@ -10,8 +10,8 @@
             padding:0;
             height: 100vh;
             width: 100vw;
-            background-color: brown;
-            
+            background-color:rgb(71, 72, 73);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
         .content{
@@ -19,8 +19,8 @@
             width: 935px;
             overflow: hidden;
             position: relative;
-            transform: translate(-7%);
-            
+            transform: translate(40%);
+            border: solid;
         }
 
         .navegation{
@@ -58,44 +58,51 @@
             height: 100%;
         }
 
-        #slide1:checked ~.s1{
+        #slide1:checked ~.s1, #slide4:checked ~.s1, #slide7:checked ~.s1{
             margin-left: 0;
         }
-        #slide2:checked ~.s1{
+        #slide2:checked ~.s1, #slide5:checked ~.s1, #slide8:checked ~.s1{
             margin-left: -20%;
         }
-        #slide3:checked ~.s1{
+        #slide3:checked ~.s1, #slide6:checked ~.s1, #slide9:checked ~.s1{
             margin-left: -40%;
         }
 
-        #slide4:checked ~.s1{
-            margin-left: 0;
-        }
-        #slide5:checked ~.s1{
-            margin-left: -20%;
-        }
-        #slide6:checked ~.s1{
-            margin-left: -40%;
-        }
-
-        #user{
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            background-color:cornflowerblue;
-            font-size: 20px;
-            margin-right: 835px;
+        #logo{
+            background-color: rgb(210, 36, 30);
             border: solid;
         }
 
+        #user{
+            background-color:rgb(223, 104, 58);
+            font-size: 20px;
+            margin-right: 835px;
+            border: solid;
+            transform: translate(40%);
+            margin-right: 764px;
+        }
+
         #dif{
-            margin: 10px;
+            background-color:rgb(88, 89, 90);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 10px;            border: solid;
+            transform: translate(39%);
+            margin-right: 755px;
         }
 
-        #curtir{
-            background-color: cornflowerblue;
-            float: float;
+
+        input{
+            display: none;
         }
 
-        #counter-label, #cp, #counter-label2 {
+        #curtir, #coment, #comenta, #comen, #envio{
+            background-color:rgb(223, 104, 58);
+            display: inline-block;
+            font-size: medium;
+            border: double;
+        }
+
+        #counter-label, #cp, #counter-label2, #counter-label3 {
             display: inline-block;
         }
         
@@ -103,11 +110,13 @@
 
 
     <script>
-        var counterVal = 30;
-        var counterVal2 = 50;
+        var counterVal = 300;
+        var counterVal2 = 556;
+        var counterVal3 = 999;
 
         function incrementClick() {
             updateDisplay(++counterVal);
+            document.getElementById("curtir").disabled = true;
         }   
         
         function updateDisplay(val) {
@@ -116,9 +125,18 @@
 
         function incrementClick2(){
             updateDisplay2(++counterVal2);
+            document.getElementById("curtir").disabled = true;
         }
         function updateDisplay2(val2) {
             document.getElementById("counter-label2").innerHTML = val2;
+        }
+
+        function incrementClick3(){
+            updateDisplay3(++counterVal3);
+            document.getElementById("curtir").disabled = true;
+        }
+        function updateDisplay3(val3) {
+            document.getElementById("counter-label3").innerHTML = val3;
         }
 
         function addComentario(){
@@ -137,12 +155,21 @@
             document.getElementById("comentarioss").innerHTML = comentarioss;
         }
 
+        function addComentario3(){
+            var ingaa = document.getElementById("comen").value;
+            var comentarioz = document.getElementById("comentarioz").innerHTML;
+            comentarioz = comentarioz + "<p>" + "Você: " + ingaa + "</p>";
+
+            document.getElementById("comentarioz").innerHTML = comentarioz;
+        }
+
     </script>
 </head>
 
 <body>
+    <h1 id="logo">Instafeed</h1>
     <div>
-        <p id="user">ContaInstagram</p>   
+        <p id="user">FoxP</p>   
         <div class="content">
             <div class="slides">
                 <input type="radio" name="radio" id="slide1" checked>
@@ -150,15 +177,15 @@
                 <input type="radio" name="radio" id="slide3">
     
                 <div class="slide s1">
-                    <img src="https://www.partnerscom.com.br/wp-content/uploads/2018/09/233601-veja-o-que-sao-campanhas-crossmedia-e-quais-resultados-esperar.png" alt="Cavaleiro">
+                    <img src="https://s1.1zoom.me/big0/679/423837-Kycb.jpg" alt="Fox">
                 </div>
                 <div class="slide">
-                    <img src="https://image.myanimelist.net/ui/fkLITaJTefafxFKPGRzngld4-RwQSDLpfSkVGQkIfYCnTtEynMhhFqVIWKqLAUBWtBRbcLnjXIMKmQgDJHgnaA" alt="Arte">
+                    <img src="https://i.pinimg.com/736x/c2/0e/14/c20e14417d3841bc0d779ffbd9704471.jpg" alt="Sword">
                 </div>
                 <div class="slide">
-                    <img src="https://pbs.twimg.com/profile_images/1347301256675651584/Lo2zXqky_400x400.jpg" alt="Retrato">
+                    <img src="https://image.myanimelist.net/ui/fkLITaJTefafxFKPGRzngld4-RwQSDLpfSkVGQkIfYCnTtEynMhhFqVIWKqLAUBWtBRbcLnjXIMKmQgDJHgnaA" alt="Art">
                 </div>
-    
+                
             </div>
     
             <div class="navegation">
@@ -169,26 +196,27 @@
         </div>
 
         <div id=dif> 
+            <p>Descrição: Imagens aleatória retiradas do google</p>
             <p id="cp">Curtido por </p>
-            <p id="counter-label">30</p>
+            <p id="counter-label">300</p>
             <input id="curtir" type="button"  value="Curtir" onclick="incrementClick();">
             
             <div id="comentarios">
-                <p>Usuário3 - WOW</p>
-                <p>Usuário5 - Faz mais!!!</p> 
+                <p>Usuário3: WOW</p>
+                <p>Usuário5: Faz mais!!!</p> 
             </div>
             
     
             <label>Comentário:</label>
             <input type="text" id="coment" ><br\>
-            <input type="button" value="Enviar" onclick="addComentario();">
+            <input id="envio" type="button" value="Enviar" onclick="addComentario();">
             
         </div>
     </div>
     
 
     <div>
-        <p id="user">ContaInstagramSecundária</p>   
+        <p id="user">Arte Kou</p>   
         <div class="content">
             <div class="slides">
                 <input type="radio" name="radio" id="slide4" checked>
@@ -196,13 +224,13 @@
                 <input type="radio" name="radio" id="slide6">
 
                 <div class="slide s1">
-                    <img src="https://pbs.twimg.com/media/EiL8xnvVgAEcfRO.jpg" alt="Cavaleiro">
+                    <img src="https://pbs.twimg.com/media/EiL8xnvVgAEcfRO.jpg" alt="Kou">
                 </div>
                 <div class="slide">
-                    <img src="https://pbs.twimg.com/media/Ef9eUEzUMAclDXA.jpg:large" alt="Arte">
+                    <img src="https://pbs.twimg.com/media/Ef9eUEzUMAclDXA.jpg:large" alt="Kou2">
                 </div>
                 <div class="slide">
-                    <img src="https://e.rpp-noticias.io/normal/2020/10/09/133613_1007593.jpg" alt="Retrato">
+                    <img src="https://e.rpp-noticias.io/normal/2020/10/09/133613_1007593.jpg" alt="Mangá">
                 </div>
             </div>
 
@@ -214,19 +242,67 @@
         </div>
 
         <div id=dif> 
+            <p>Descrição: Imagens retiradas do usuário Kou pelo twitter</p>
             <p id="cp">Curtido por </p>
-            <p id="counter-label2">50</p>
+            <p id="counter-label2">556</p>
             <input id="curtir" type="button"  value="Curtir" onclick="incrementClick2();">
         
             <div id="comentarioss">
-                <p>Usuário10 - Nice</p>
-                <p>Usuário8 - Uau!!!</p>
+                <p>Usuário10: Nice</p>
+                <p>Usuário80: Uau!!!</p>
+                <p>Usuário20: KKKKKKKKK</p>
             </div>
             
 
             <label>Comentário:</label>
             <input type="text" id="comenta"><br\>
-            <input type="button" value="Enviar" onclick="addComentario2();">
+            <input id="envio" type="button" value="Enviar" onclick="addComentario2();">
+        
+        </div>
+    </div>
+
+    <div>
+        <p id="user">Scenery</p>   
+        <div class="content">
+            <div class="slides">
+                <input type="radio" name="radio" id="slide7" checked>
+                <input type="radio" name="radio" id="slide8">
+                <input type="radio" name="radio" id="slide9">
+
+                <div class="slide s1">
+                    <img src="https://www.r2pg.com.br/wp-content/uploads/2016/07/1463086970643.jpg" alt="Cenario1">
+                </div>
+                <div class="slide">
+                    <img src="https://wallpaperaccess.com/full/2249567.jpg" alt="Cenario2">
+                </div>
+                <div class="slide">
+                    <img src="https://images3.alphacoders.com/599/599318.jpg" alt="Cenario3">
+                </div>
+            </div>
+
+            <div class="navegation">
+                <label class="bar" for="slide7"></label>
+                <label class="bar" for="slide8"></label>
+                <label class="bar" for="slide9"></label>
+            </div>
+        </div>
+
+        <div id=dif> 
+            <p>Descrição: Imagens aleatória retiradas do google por busca por cenários</p>
+            <p id="cp">Curtido por </p>
+            <p id="counter-label3">999</p>
+            <input id="curtir" type="button"  value="Curtir" onclick="incrementClick3();">
+        
+            <div id="comentarioz">
+                <p>Usuário150: Holy shit</p>
+                <p>Usuário880: KRLLL!!!</p>
+                <p>Usuário700: Ok, this is epic</p>
+            </div>
+            
+
+            <label>Comentário:</label>
+            <input type="text" id="comen"><br\>
+            <input id="envio" type="button" value="Enviar" onclick="addComentario3();">
         
         </div>
     </div>
