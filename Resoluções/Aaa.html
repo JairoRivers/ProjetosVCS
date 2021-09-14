@@ -1,0 +1,30 @@
+<html>
+<head>
+
+    <style>
+        .corExemplo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            float: left;
+        }
+    </style>
+    <script>
+        function trocaCor(){
+            var cor = document.getElementById("corum").value;
+            document.getElementById("boxum").style.backgroundColor = cor;
+        }
+        
+    </script>
+</head>
+<body>
+    
+     <div id="boxum" class="corExemplo">Teste</div>
+     
+     <form action="#" style="clear: both;">
+         <label for="corum">Cor 1</label>
+         <input type="color" id="corum" onchange="trocaCor();">
+     </form>
+</body>
+</html>

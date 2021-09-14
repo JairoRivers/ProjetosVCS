@@ -1,0 +1,92 @@
+<html>
+<head>
+    <meta http-equiv= "Content - Type" content= "texte/html; charset= utf - 8">
+    <meta charset= "utf -8">
+    <title> Instafeed </title>
+
+    <style>
+       #logo{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: chocolate;
+        }
+        body{
+            margin:0;
+            padding:0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #user{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            background-color:cornflowerblue;
+            font-size: 20px;
+        }
+        label{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+        div{
+            background-color:dimgray;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-left: 400px;
+            margin-right: 490px;
+            margin-bottom: 30px;
+            transform: translate(10%, 0%);
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        #cutir{
+            background-color: cornflowerblue;
+            float: float;
+        }
+        #counter-label{
+            display: inline-block;
+        }
+       
+    </style>
+
+    <script>
+        var counterVal = 30;
+
+        function incrementClick() {
+            updateDisplay(++counterVal);
+            
+        }   
+        function updateDisplay(val) {
+            document.getElementById("counter-label").innerHTML = val;
+        }   
+    </script>
+ 
+</head>
+
+<body>
+    <p id="logo"><font size ="5"> Instagram</font> </p>
+
+    <div>
+        <p id="user">ContaInstagram</p>   
+    </div>
+
+    <div>
+        <img src="https://www.partnerscom.com.br/wp-content/uploads/2018/09/233601-veja-o-que-sao-campanhas-crossmedia-e-quais-resultados-esperar.png" width=820 height=500>
+    </div>
+
+    <div>
+        <p>Curtido por </p>
+        <p id="counter-label">30</p>
+        <input id="cutir" type="button"  value="Cutir" onclick="incrementClick();">
+        
+        <p>Usuário3 - Imagem incrivel</p>
+        <p>Usuário5 - @usuario2 olha isso!!!</p>
+
+        <label>Comentário:</label>
+        <input type="text" ><br\>
+        <input type="button" value="Enviar" onclick="addComentario();">
+    </div>
+    
+</body>
+</html>
