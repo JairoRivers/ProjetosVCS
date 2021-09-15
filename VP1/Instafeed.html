@@ -96,7 +96,7 @@
             display: none;
         }
 
-        #curtir, #coment, #comenta, #comen, #envio{
+        #curtir, #curtir2, #curtir3, #coment, #comenta, #comen, #envio{
             background-color:rgb(223, 104, 58);
             display: inline-block;
             font-size: medium;
@@ -107,7 +107,7 @@
         #counter-label, #cp, #counter-label2, #counter-label3 {
             display: inline-block;
         }
-        
+
     </style>
 
 
@@ -115,20 +115,50 @@
         var counterVal = 300;
         var counterVal2 = 556;
         var counterVal3 = 999;
+        var controle = 1;
+        var controle2 = 1;
+        var controle3 = 1;
 
         function incrementClick() {
-            var val = counterVal++;
-            document.getElementById("counter-label").innerHTML = val;            
+            if (controle == 1){
+                var val = counterVal++;
+                document.getElementById("counter-label").innerHTML = val; 
+                document.getElementById("curtir").value = "Curtir";  
+                controle++; 
+            }else{
+                var valn = counterVal--;
+                document.getElementById("counter-label").innerHTML = valn; 
+                document.getElementById("curtir").value = "Descurtir";
+                controle = 1;  
+            }
         }   
         
         function incrementClick2(){
-            var val2 = counterVal2++;
-            document.getElementById("counter-label2").innerHTML = val2;
+            if (controle2 == 1){
+                var val2 = counterVal2++;
+                document.getElementById("counter-label2").innerHTML = val2; 
+                document.getElementById("curtir2").value = "Curtir";  
+                controle2++; 
+            }else{
+                var valn2 = counterVal2--;
+                document.getElementById("counter-label2").innerHTML = valn2; 
+                document.getElementById("curtir2").value = "Descurtir";
+                controle2 = 1;  
+            }
         }
     
         function incrementClick3(){
-            var val3 = counterVal3++;
-            document.getElementById("counter-label3").innerHTML = val3;
+            if (controle3 == 1){
+                var val3 = counterVal3++;
+                document.getElementById("counter-label3").innerHTML = val3; 
+                document.getElementById("curtir3").value = "Curtir";  
+                controle3++; 
+            }else{
+                var valn3 = counterVal3--;
+                document.getElementById("counter-label3").innerHTML = valn3; 
+                document.getElementById("curtir3").value = "Descurtir";
+                controle3 = 1;  
+            }
         }
         
         function addComentario(){
@@ -191,7 +221,8 @@
             <p>Descrição: Imagens aleatória retiradas do google</p>
             <p id="cp">Curtido por </p>
             <p id="counter-label">300</p>
-            <input id="curtir" type="button"  value="Curtir" onclick="incrementClick();">
+            <p id= cp> pessoas</p>
+            <input id="curtir" type="button" value="Curtir" onclick="incrementClick();">
             
             <div id="comentarios">
                 <p>Usuário3: WOW</p>
@@ -236,7 +267,8 @@
             <p>Descrição: Imagens retiradas do usuário Kou pelo twitter</p>
             <p id="cp">Curtido por </p>
             <p id="counter-label2">556</p>
-            <input id="curtir" type="button"  value="Curtir" onclick="incrementClick2();">
+            <p id= cp> pessoas</p>
+            <input id="curtir2" type="button" value="Curtir" onclick="incrementClick2();">
         
             <div id="comentarioss">
                 <p>Usuário10: Nice</p>
@@ -281,7 +313,8 @@
             <p>Descrição: Imagens aleatória retiradas do google por busca por cenários</p>
             <p id="cp">Curtido por </p>
             <p id="counter-label3">999</p>
-            <input id="curtir" type="button"  value="Curtir" onclick="incrementClick3();">
+            <p id= cp> pessoas</p>
+            <input id="curtir3" type="button" value="Curtir" onclick="incrementClick3();">
         
             <div id="comentarioz">
                 <p>Usuário150: Holy shit</p>
